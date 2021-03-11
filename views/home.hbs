@@ -1,0 +1,100 @@
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>toystore</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet"  href="./css.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  
+</head> 
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a>Toy<span class="logo_colour">_Store</span></a></h1>
+          <h2>Safe. Creative</h2>
+        </div>
+      </div>
+      <nav>
+        <div id="menu_container">
+          <ul class="sf-menu" id="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/addProduct">Add product</a></li>
+            <li><a href="">Contact Us</a>
+            <ul>
+                <li><a href="https://www.facebook.com/lanhcongconchim">Fackbook: Lanh Cong Con Chim</a></li>
+                <li><a href="https://chat.zalo.me/">Zalo:Ngo Linh Son 0988730616</a></li>
+                <li><a >Phone:0988730616</li>
+            </ul>
+            <li>              
+              <form action="/search" method="post" style="font-size: 20px;" >
+              <input type="text" name="txtSearch" placeholder="rubik" style="font-size: 20px;">
+              <input type="submit" value="Search" style="font-size: 20px; color:rgb(2, 2, 2);background:#09D4FF; width:80px;">
+              </form>
+            </li>
+
+          </ul>
+          
+        </div>
+      </nav>
+    </header>
+    
+    <div id="site_content">
+      {{!-- <div id="sidebar_container"> --}}
+        {{!-- <div class="sidebar">
+          <h3>Latest toy</h3>
+          <h4>updates:</h4>
+          <h5>January 1st, 2021</h5>
+          <p>......<br /><a href="#">no more</a></p>
+        </div> --}}
+        {{!-- <div class="sidebar">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">First Link</a></li>
+            <li><a href="#">Another Link</a></li>
+            <li><a href="#">And Another</a></li>
+            <li><a href="#">One More</a></li>
+            <li><a href="#">Last One</a></li>
+          </ul>
+        </div> --}}
+      {{!-- </div> --}}
+      <div class="content">
+        <h1 style="color: 09D4FF; " >Welcome to the toy'store for children</h1>
+        <table border="1" style="width:900px;background:black;">
+        <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Amount</th>
+            <th>Picture</th>
+            <th>Price</th>
+            <th>Options</th>
+        </tr>
+            {{#each model}}
+            <tr>
+                <td>{{Name}}</a></td>
+                <td>{{Color}}</td>
+                <td>{{Amount}}</td>
+                <td><img width="120", height="120" src="{{Picture}}"  alt=""></td> 
+                <td>{{Price}}</td>
+                <td><button><a href="/delete?id={{_id}}">Delete</a></button></td> 
+            </tr>
+            
+            {{/each}}
+        </table>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; TozomeeLinhSon_tfs | <a href="https://www.facebook.com/lanhcongconchim">facebook:lanhcongconchim</a></p>
+    </footer>
+  </div>
+  
+  
+</body>
+</html>

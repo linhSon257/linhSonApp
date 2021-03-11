@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Add product</title>
+	
+	<meta charset="utf-8" />
+	
+	<link rel="stylesheet" href="./css.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a>Toy<span class="logo_colour">_Store</span></a></h1>
+          <h2>Safe. Creative</h2>
+        </div>
+      </div>
+      <nav>
+        <div id="menu_container">
+          <ul class="sf-menu" id="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/addProduct">Add product</a></li>
+           
+            <li><a href="#">Contact Us</a>
+            <ul>
+                <li><a href="https://www.facebook.com/lanhcongconchim">Fackbook: Lanh Cong Con Chim</a></li>
+                <li><a href="https://chat.zalo.me/">Zalo:Ngo Linh Son 0988730616</a></li>
+                <li><a >Phone:0988730616</li>
+            </ul>
+
+            </li>
+        
+          </ul>
+        </div>
+      </nav>
+    </header>
+	<h2 style="font-size:60px; color:#09D4FF; ">Adding product to Data</h2>
+	
+	<form action="/addProduct" method="POST">
+		
+		<p>
+			<input type="text" name="Name" id="name" placeholder="ball" style="width: 500px;height:25px;"/>
+			<label for="name">- Name</label>
+		</p>
+		
+		<p>
+			<input type="text" name="Color" id="color" placeholder="green" style="width: 500px;height:25px;"/>
+			<label for="color">- Color</label>
+		</p>
+		
+		<p>
+			<input type="text" name="Amount" id="amount" placeholder="20" style="width: 500px;height:25px;"/>
+			<label for="amount">- Amount</label>
+		</p>		
+
+    <p>
+			<input type="text" name="Picture" id="picture" placeholder="image/picture.png"style="width: 500px;height:25px;"/>
+			<label for="picture">- Picture</label>
+		</p>
+    <p>
+			<input type="text" name="Price" id="price" placeholder="20$" style="width: 500px;height:25px;"/>
+			<label for="price">- Price</label>
+		</p>
+		
+		<p class="submit">
+		<input type="submit" value="Add" style="
+    background: #52c5fc;
+    text-align: center;
+    width: 70px;">
+		</p>
+	</form>
+
+
+
+</body>
+
+</html>
+
